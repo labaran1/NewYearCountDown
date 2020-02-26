@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import Countdown from './Component/CountDown'
+
 function App() {
+  const d = new Date();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<div>
+  <h1> New Year Countdown</h1>
+<Countdown/>
+
+<h1 style={{marginTop:"20rem", fontSize:"10rem"}}>
+  {d.getFullYear() + 1}
+</h1>
+
+</div>
+
+
+   
   );
 }
 
